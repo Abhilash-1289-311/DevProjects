@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #00feba 0%, #5b548a 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#searchBtn {
+  padding: 10px 20px;
+  background: #5b548a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+#searchBtn:hover {
+  background: #4a4379;
+}
+
+.weather-display {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#cityName {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+
+#weatherIcon {
+  width: 100px;
+  height: 100px;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #666;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail span:first-child {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.detail span:last-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.error {
+  background: #ff6b6b;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #5b548a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
